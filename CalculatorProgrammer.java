@@ -1,14 +1,13 @@
 
 /**
- * Write a description of class Calculator here.
+ * Write a description of class CalculatorProgrammer here.
  *
- * @author arynramadhani
- * @version 0.1                                
+ * @author (your name)
+ * @version (a version number or a date)
  */
-public class Calculator
+public class CalculatorProgrammer extends Calculator
 {
-    // op1
-    public double op1=0;
+     public int op1=0;
     public double op2=0;
     public static final String info = "Kalkulatorku";
     public static int jumlahobject = 0;
@@ -16,52 +15,53 @@ public class Calculator
     /**
      * Constructor for objects of class Calculator
      */
-    public Calculator()
+    public CalculatorProgrammer()
     {
         // initialise instance variables
         this.jumlahobject += 1;
     }
-
+    
     /**
      * Constructor for objects of class Calculator
      * @param  double, double inisialisasi nilai dari op1 dan op2
     */
-
-    public Calculator(double op1, double op2)
+  
+    public CalculatorProgrammer(int op1, double op2)
     {
         this.op1 = op1;
         this.op2 = op2;
         this.jumlahobject += 1;
-
+    
     }
-
+    
     /**
      * Constructor for objects of class Calculator
      * @param  double, double inisialisasi nilai dari op1 dan op2
     */
-
-    public Calculator(double op2)
+  
+    public CalculatorProgrammer(double op2)
     {
         this.op2 = op2;
         this.jumlahobject += 1;
-
+        
+    
     }
-
-
-
-
+    
+    
+    
+    
     /**
      * set op1
      *
      * @param  double op1  
      * @return  void
      */
-    public void setOp1(double op1)
+    public void setOp1(int op1)
     {
         this.op1 = op1;
     }
-
-
+    
+    
     /**
      * get op1
      *
@@ -72,8 +72,8 @@ public class Calculator
     {
         return this.op1;
     }
-
-
+    
+    
     /**
      * jumlah tanpa parameter
      *
@@ -84,7 +84,7 @@ public class Calculator
     {
         return this.op1 + this.op2;
     }
-
+    
      /**
      * jumlah dengan parameter
      *
@@ -92,64 +92,39 @@ public class Calculator
      *         double op2
      * @return double hasil penjumlahan op1 + op2
      */
-    public double jumlah(double op1, double op2) 
+    public double jumlah(int op1, double op2) 
     {
         this.op1 = op1;
         this.op2 = op2;
         return jumlah();
     }
-    public double kurang()
-    {
-        return this.op1- this.op2;
-    }
-     /**
-     * kurang dengan parameter
+    
+    /**
+     * konversiBilanganDesimaltoHex
      *
      * @param  double op1
      *         double op2
-     * @return double hasil pengurangan op1 - op2
+     * @return double hasil penjumlahan op1 + op2
      */
+    public String konversiBilanganDesimaltoHex(int op1) 
+    {
+        // buat konversi ke hex dengan java (tugas)
+        String hasilKonversi = Integer.toHexString(op1) ;
+        return hasilKonversi;
+    }
+    
+    // method konversiBilanganDesimaltoBiner
+    public String konversiBilanganDesimaltoBinner(int op1) 
+    {
+        // buat konversi ke hex dengan java (tugas)
+        String hasilKonversi = Integer.toBinaryString(op1) ;
+        return hasilKonversi;
+        
 
-     public double kurang(double op1, double op2) 
-    {
-        this.op1 = op1;
-        this.op2 = op2;
-        return this.op1- this.op2;
-    }
-    public double perkalian()
-    {
-        return this.op1* this.op2;
-    }
-     /**
-     * perkalian dengan parameter
-     *
-     * @param  double op1
-     *         double op2
-     * @return double hasil perkalian op1 * op2
-     */
 
-     public double perkalian(double op1, double op2) 
-    {
-        this.op1 = op1;
-        this.op2 = op2;
-        return this.op1* this.op2;
-    }
-    public double pembagian()
-    {
-        return this.op1/ this.op2;
-    }
-     /**
-     * pembagian dengan parameter
-     *
-     * @param  double op1
-     *         double op2
-     * @return double hasil pembagian op1 / op2
-     */
+    
 
-     public double pembagian(double op1, double op2) 
-    {
-        this.op1 = op1;
-        this.op2 = op2;
-        return this.op1/ this.op2; 
+    
+     
     }
 }
