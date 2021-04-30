@@ -77,7 +77,14 @@ public class main
        System.out.println("Konversi 7070 ke Hexadesimal adalah = "+ cp.konversiBilanganDesimaltoHex(7070));
        System.out.println("Konversi 7070 ke Binner adalah = "+ cp.konversiBilanganDesimaltoBinner(7070));  
      
-      
+      CalculatorTrigonometri  cls = new CalculatorTriRadian();
+      CalculatorTrigonometri  clv = new CalculatorTriDegree();
+      System.out.println(" \n CalculatorTrigonometri ");
+      System.out.println("Nilai dari sin 20 adalah"+ Math.sin(20));
+      System.out.println("Nilai dari Cos 75 adalah"+ Math.cos(75));
+      System.out.println("Nilai dari tan 80 adalah"+ Math.tan(80));
+      System.out.println("Nilai dari derajat sudut untuk PI/6 adalah " + Math.toDegrees(Math.PI/6) + " derajat");  
+      System.out.println("Nilai dari sudut radian untuk sudut 60 derajat adalah " + Math.toRadians(60));
          
     }
 }
