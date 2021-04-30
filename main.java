@@ -2,8 +2,8 @@
 /**
  * Write a description of class main here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author arynramadhani
+ * @version 0.1
  */
 public class main
 {
@@ -52,7 +52,7 @@ public class main
        double pembagian2 = calculator1.pembagian(5, 4);
        System.out.println("Hasil pembagian method bagi tanpa parameter:  " + pembagian1);
        System.out.println("Hasil pembagian  method bagi dengan parameter:  "+ pembagian2);
-       */
+       
        CalculatorProgrammer clp = new CalculatorProgrammer();
        System.out.println(clp.jumlah(4,5));
       
@@ -85,6 +85,41 @@ public class main
       System.out.println("Nilai dari tan 80 adalah"+ Math.tan(80));
       System.out.println("Nilai dari derajat sudut untuk PI/6 adalah " + Math.toDegrees(Math.PI/6) + " derajat");  
       System.out.println("Nilai dari sudut radian untuk sudut 60 derajat adalah " + Math.toRadians(60));
-         
+       */
+     
+     Calculator cl = new Calculator();
+      SimpanOperasiCalculator  spr = new SimpanOperasiKeMemoryReverse();
+      
+      
+      cl.setSimpanOperasi(spr);
+      cl.op1 = 1;
+      cl.op2 = 1;
+      System.out.println(cl.jumlah());
+      
+      cl.op1 = 2;
+      cl.op2 = 2;
+      System.out.println(cl.jumlah());
+      
+      cl.op1 = 3;
+      cl.op2 = 3;
+      System.out.println(cl.jumlah());
+      System.out.println("Data dari memori: ");
+      System.out.println(cl.bacaOperasi());
+      
+      SimpanOperasiCalculator spf = new SimpanOperasikeMemoryForward();
+      cl.setSimpanOperasi(spf);
+      cl.op1 = 1;
+      cl.op2 = 1;
+      System.out.println(cl.jumlah());
+      
+      cl.op1 = 2;
+      cl.op2 = 2;
+      System.out.println(cl.jumlah());
+      
+      cl.op1 = 3;
+      cl.op2 = 3;
+      System.out.println(cl.jumlah());
+      System.out.println("Data dari memori: ");
+      System.out.println(cl.bacaOperasi());
     }
-}
+}     
